@@ -26,21 +26,27 @@
             <Button
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1.5"
+                android:layout_weight="1"
                 android:text="Dibujar"
                 android:onClick="dibujar"/>
             <Button
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:text="Limpiar"
-                android:layout_weight="0.5"
+                android:layout_weight="1"
                 android:onClick="limpiar"/>
-
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="Decode"
+                android:layout_weight="1"
+                android:onClick="Decode"/>
         </LinearLayout>
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Ruta2puntos"
+            android:layout_weight="0.3"
             android:onClick="dibujaRuta"/>
     </LinearLayout>
 </LinearLayout>

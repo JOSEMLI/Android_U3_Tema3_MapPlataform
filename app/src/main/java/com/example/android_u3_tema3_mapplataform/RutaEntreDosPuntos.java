@@ -2,6 +2,7 @@ package com.example.android_u3_tema3_mapplataform;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -15,6 +16,7 @@ import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.maps.model.Polyline;
 import com.google.android.gms.maps.model.PolylineOptions;
+import com.google.maps.android.PolyUtil;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -62,5 +64,18 @@ public class RutaEntreDosPuntos extends AppCompatActivity implements OnMapReadyC
       Log.i("miposicion1", "lat1:" + latLngList.get(0).latitude + " lon1:" + latLngList.get(0).longitude);
       Log.i("miposicion2", "lat2:" + latLngList.get(1).latitude + " lon2:" + latLngList.get(1).longitude);
     }
+  }
+
+  public void Decode(View view) {
+    DecodePolyline("bj~lBh}xkLYBWNKX?Ro@e@u@w@yBsC}CaEuAyBwA{Be@@aBF_@Dq@Ju@Ps@TiEiIgDcGwC|By@h@");
+  }
+  Polyline polyline2 = null;
+  public void DecodePolyline(String encodepolyline){
+    List<LatLng> list = PolyUtil.decode(encodepolyline);
+    if (polyline2 != null) polyline2.remove();
+    PolylineOptions polylineOptions = new PolylineOptions()
+        .addAll(list).clickable(true);
+    polyline2 = gMap.addPolyline(polylineOptions);
+    polyline2.setColor(Color.BLUE);
   }
 }
