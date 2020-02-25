@@ -17,4 +17,8 @@ public class MainActivity extends AppCompatActivity {
   public void rutadospunto(View view) {
 startActivity(new Intent(this,RutaEntreDosPuntos.class));
   }
+
+  public void geocoding(View view) {
+    startActivity(new Intent(this,MiGeocode.class));
+  }
 }
