@@ -35,6 +35,12 @@
                 android:text="Limpiar"
                 android:layout_weight="0.5"
                 android:onClick="limpiar"/>
+
         </LinearLayout>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ruta2puntos"
+            android:onClick="dibujaRuta"/>
     </LinearLayout>
 </LinearLayout>

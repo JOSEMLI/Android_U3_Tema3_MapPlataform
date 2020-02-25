@@ -3,6 +3,7 @@ package com.example.android_u3_tema3_mapplataform;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -53,5 +54,13 @@ public class RutaEntreDosPuntos extends AppCompatActivity implements OnMapReadyC
     if (polyline != null) polyline.remove();
     for (Marker marker : markerList) marker.remove();
     latLngList.clear(); markerList.clear();
+  }
+
+  public void dibujaRuta(View view) {
+    Log.i("miposicionsize","size:"+latLngList.size());
+    if(latLngList.size()>1) {
+      Log.i("miposicion1", "lat1:" + latLngList.get(0).latitude + " lon1:" + latLngList.get(0).longitude);
+      Log.i("miposicion2", "lat2:" + latLngList.get(1).latitude + " lon2:" + latLngList.get(1).longitude);
+    }
   }
 }
